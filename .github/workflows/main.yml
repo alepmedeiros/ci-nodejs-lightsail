@@ -18,7 +18,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ./node_modules
-        key: ${{ runner.os }}-simpleatendimento${{ hashFiles('**/package-lock.json') }}
+        key: ${{ runner.os }}-tbgmarketing${{ hashFiles('**/package-lock.json') }}
                 
     - name: Install Node.js Dependencies
       run: yarn
