@@ -19,7 +19,7 @@ jobs:
     - name: Install Node.js Dependencies
       run: yarn
       
-    - run: yarn run build    
+    - run: npm run build    
     
     - name: Save build folder
       uses: actions/upload-artifact@v2
