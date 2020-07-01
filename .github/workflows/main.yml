@@ -20,7 +20,7 @@ jobs:
           key: ${{ runner.os }}-simpleatendimento${{ hashFiles('**/package-lock.json') }}
         
       - name: Limpando cache
-        run: npm cache clean --force && rm -rf ./node_modules && rm package-lock.json
+        run: npm cache clean --force
       
       - name: Install Node.js Dependencies
         run: npm install --ignore-scripts
