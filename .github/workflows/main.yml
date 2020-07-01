@@ -13,17 +13,11 @@ jobs:
 
     - name: Setup Node 12
       uses: actions/setup-node@v2.1.0
-
-    - name: Cache node modules
-      uses: actions/cache@v2
-      with:
-        path: ./node_modules
-        key: ${{ runner.os }}-tbgmarketing${{ hashFiles('**/package-lock.json') }}
                 
     - name: Install Node.js Dependencies
       run: yarn
       
-    - run: yarn run build    
+    - run: npm run build    
     
     - name: Save build folder
       uses: actions/upload-artifact@v2
