@@ -20,7 +20,7 @@ jobs:
           key: ${{ runner.os }}-simpleatendimento${{ hashFiles('**/package-lock.json') }}
       
       - name: Install Node.js Dependencies
-        run: npm install
+        run: npm ci
         
       - run: npm run build --if-present
 
