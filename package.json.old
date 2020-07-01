@@ -44,8 +44,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "aws s3 sync build/ s3://githubactionss3 --acl public-read"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -61,5 +60,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/googlemaps": "3.30.19",
+    "@types/markerclustererplus": "2.1.33",
+    "@types/react": "16.8.13",
+    "typescript": "3.4.3"
   }
 }
