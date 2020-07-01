@@ -17,7 +17,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-simpleatendimento${{ hasFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-simpleatendimento${{ hashFiles('**/package-lock.json') }}
       
       - name: Install Node.js Dependencies
         run: npm install
