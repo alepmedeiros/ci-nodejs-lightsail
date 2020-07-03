@@ -1,0 +1,19 @@
+{
+  "name": "ci-nodejs-lightsail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alepmedeiros/ci-nodejs-lightsail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alepmedeiros/ci-nodejs-lightsail/issues"
+  },
+  "homepage": "https://github.com/alepmedeiros/ci-nodejs-lightsail#readme"
+}
