@@ -18,5 +18,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         passphrase: ${{ secrets.PASSPHRSE }}
         port: ${{ secrets.PORT }}
-        source: ${{ GITHUB_WORKFLOW }}
+        source: ${{ github.workflow }}
         target: "/opt/nodeserver"
