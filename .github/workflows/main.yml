@@ -10,7 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      run: echo ${{ GITHUB_WORKFLOW }}
       
     - name: Copy file via ssh
       uses: appleboy/scp-action@v0.0.1
@@ -19,5 +18,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         passphrase: ${{ secrets.PASSPHRSE }}
         port: ${{ secrets.PORT }}
-        source: "*"
+        source: ${{ GITHUB_WORKFLOW }}
         target: "/opt/nodeserver"
