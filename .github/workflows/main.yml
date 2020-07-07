@@ -11,12 +11,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
+    -name: Run multi-line script
+     run: |
+       mkdir ../build
+       cp -TR ../build
+       tar -cvf deploy.tar ../build
+      
     - name: Copy file via ssh
       uses: appleboy/scp-action@v0.0.1
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        passphrase: ${{ secrets.PASSPHRSE }}
+        key: ${{ secrets.PASSPHRSE }}
         port: ${{ secrets.PORT }}
         source: ${{ github.workflow }}
         target: "/opt/nodeserver"
