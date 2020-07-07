@@ -11,13 +11,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Copy file via ssh e
+    - name: Copy file via ssh
       uses: appleboy/scp-action@master
       env:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
+        host: 54.221.5.196
+        username: ubuntu
         key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
+        port: 22
       with:
         source: "."
         target: "/opt/nodeserver"
