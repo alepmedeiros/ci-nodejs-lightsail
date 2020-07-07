@@ -20,12 +20,3 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "."
         target: "/opt/nodeserver"
-    
-    - name: Executing remore command
-      uses: appleboy/ssd-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        port: ${{ secrets.PORT }}
-        key: ${{ secrets.PASSPHRSE }}
-        script: cat /opt/nodeserver/server.js
