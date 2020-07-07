@@ -20,4 +20,4 @@ jobs:
         port: ${{ secrets.PORT }}
       with:
         source: "."
-        target: "/home/ubuntu"
+        target: "/opt/nodeserver"
