@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Copy file via ssh
+    - name: Copy file via ssh e
       uses: appleboy/scp-action@master
       env:
         host: ${{ secrets.HOST }}
