@@ -1,4 +1,4 @@
-name: Nodejs Deploy Lightsail
+name: Nodejs Deploy Lightsailr
 
 on:
   push:
