@@ -20,4 +20,4 @@ jobs:
         port: 22
       with:
         source: "."
-        target: "/opt/nodeserver"
+        target: "/home/ubuntu/sws_eduzzwebhook"
