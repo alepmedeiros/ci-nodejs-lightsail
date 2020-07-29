@@ -14,6 +14,7 @@ jobs:
     - name: SCP deploy action
       uses: appleboy/ssh-action@master
       with:
+        scr: .
         host: 54.221.5.196
         remote: /home/ubuntu/sws_eduzzwebhook
         port: 22
