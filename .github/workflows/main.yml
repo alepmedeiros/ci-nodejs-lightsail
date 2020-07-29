@@ -12,11 +12,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: SCP deploy action
-      uses: nogsantos/ssh-scp-deploy@v1.2.1
+      uses: appleboy/ssh-action@master
       with:
-        src: .
         host: 54.221.5.196
         remote: /home/ubuntu/sws_eduzzwebhook
         port: 22
-        user: ubuntu
+        username: ubuntu
         key: ${{ secrets.KEY_RSA }}
+        script: ls -la
