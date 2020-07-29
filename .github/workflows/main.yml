@@ -18,6 +18,5 @@ jobs:
         host: 54.221.5.196
         remote: /home/ubuntu/sws_eduzzwebhook
         port: 22
-        username: ubuntu
-        key: ${{ secrets.KEY_RSA }}
-        script: ls -la
+        user: ubuntu
+        key: ${{ secrets.KEY }}
