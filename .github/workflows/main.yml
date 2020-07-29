@@ -1,22 +1,32 @@
-name: Nodejs Deploy Lightsailc
+name: MasterCI
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: Build and Deploy
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@master
 
-    - name: SCP deploy action
-      uses: appleboy/ssh-action@master
-      with:
-        scr: .
-        host: 54.221.5.196
-        remote: /home/ubuntu/sws_eduzzwebhook
-        port: 22
-        user: ubuntu
-        key: ${{ secrets.KEY }}
+      - name: Bucket actions
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8
+      - run: npm i
+      - run: npm run test
+      - run: npm run generate
+      
+      - name: Publish
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: ./*
+          host: 54.221.5.196
+          remote: /home/ubuntu/sws_eduzzwebhook
+          port: 22
+          user: ubuntu
+          key: ${{ secrets.SSH_KEY }}
