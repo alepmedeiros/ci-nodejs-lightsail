@@ -21,3 +21,12 @@ jobs:
           port: 22
           user: ubuntu
           key: ${{ secrets.KEY_RSA }}
+          
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: 54.221.5.196
+          username: ubuntu
+          key: ${{ secrets.KEY_RSA }}
+          port: 22
+          script: sudo systemctl restart swswebhook
